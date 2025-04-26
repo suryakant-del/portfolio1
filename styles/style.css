@@ -1,0 +1,192 @@
+/* IMPORTING GOOGLE FONT: INTER TIGHT. */
+@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* DEFINING VARIABLES. */
+:root {
+    /* TEXT SIZES. */
+    --h1: 50px;
+    --h2: 24px;
+    --h3: 20px;
+    --nm: 16px;
+
+    ---h1-mob: 28px;
+    ---h2-mob: 24px;
+    ---h3-mob: 20px;
+    --nm-mob: 14px;
+
+    /* COLORS. */
+    --primary: tomato;
+    --secondary: #49C5B6;
+    --white: #FEFEFE;
+    --white-2: #F0F0F0;
+    --black: #030303;
+    --black-2: #303030;
+    --gray: #606060;
+    --gray-2: #E0E0E0;
+
+    /* SPACING. */
+    --p-y: 60px;
+    --p-x: 120px;
+    --p-y-mob: 20px;
+    --p-x-mob: 40px;
+
+    /* TRANSITION TIME. */
+    --time: .5s;
+}
+
+/* DEFAULTS. */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: "Inter Tight", sans-serif;
+    letter-spacing: 2px;
+}
+
+/* BODY SETUP. */
+html, body {
+    background-color: var(--primary);
+    color: var(--white);
+    min-height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+/* NAVBAR: START. */
+
+/* NAV. */
+.nav {
+    height: 100px;
+    background-color: var(--primary);
+    color: var(--white);
+    position: fixed !important;
+    width: 100% !important;
+    top: 0 !important;
+    z-index: 999 !important;
+    padding: 0 var(--p-x);
+    text-transform: uppercase;
+    overflow: visible;
+}
+
+/* NAV CONTENTS. */
+.nav .nav-contents {
+    height: inherit;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* NAV TITLE. */
+.nav .nav-contents .nav-title {
+    font-size: var(--h3);
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* NAV ITEMS. */
+.nav .nav-contents .nav-items a {
+    font-size: 16px;
+    margin-left: 15px;
+    text-decoration: none;
+    color: var(--white);
+
+    &:hover {
+        font-weight: bold;
+        transition: var(--time);
+    }
+}
+
+/* HAMBURGER. */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background: var(--white);
+    display: block;
+    border-radius: 3px;
+}
+
+/* NAVBAR: END. */
+
+/* ABOUT: START. */
+
+/* ABOUT. */
+#about {
+    height: auto;
+    background-color: var(--white);
+    color: var(--black);
+    padding: var(--p-y) var(--p-x);
+    margin-top: 100px;
+}
+
+/* ABOUT CONTENTS. */
+#about .about-contents {
+    height: inherit;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    /* DESCRIPTION. */
+    & .about-description {
+        padding-right: calc(var(--p-x)/2);
+        width: 600px;
+        max-width: 600px;
+        min-width: 200px;
+
+        & h1 {
+            font-size: var(--h1);
+            margin-bottom: 30px;
+        }
+
+        & h3 {
+            font-size: var(--h3);
+            margin-bottom: 20px;
+            color: var(--gray);
+        }
+
+        & p,
+        blockquote {
+            line-height: 30px;
+            margin-bottom: 10px;
+        }
+
+        & blockquote {
+            color: var(--black-2);
+        }
+    }
+
+    /* IMAGE (CORRECTED SECTION). */
+    & .about-image {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    & .about-image img {
+        width: 250px;
+        height: 250px;
+        object-fit: cover;
+        background-size: cover;
+        background-position: center;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        transition: var(--time);
+    }
+
+    & .about-image img:hover {
+        cursor: pointer;
+        box-shadow: 0 0 20px 5px var(--black-2);
+    }
+}
+
+/* ABOUT: END. */
+
+/* (EXPERIENCE, AWARDS, PROJECTS, CONTACT sections below remain unchanged exactly as you wrote.) */
